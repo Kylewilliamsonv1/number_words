@@ -10,4 +10,8 @@ describe('#numbers_to_words') do
     num = NumberWords.new(9)
   expect(num.numbers_to_words(num)).to(eq('nine'))
   end
+  it("should return the word equivalent of numbers from 1 to 99") do
+    num = NumberWords.new(30)
+  expect(num.numbers_to_words(num)).to(eq('thirty'))
+  end
 end

@@ -19,7 +19,10 @@ class NumberWords
       array = digits(@num)
       @length = array.length
       if (@length === 2) && (array[1] === 0)
-      @word = tens_hash.fetch()
+      @word = tens_hash.fetch(array[0])
+      elsif (@length === 2) && (array[1] != 0)
+      @word = tens_hash.fetch(array[0])
+      @word.concat(ones_hash.fetch(array[1]))
     # # number_words.fetch(@num)
     # if length === 2 && length[0] === 1
     #   ones_hash.fetch()
